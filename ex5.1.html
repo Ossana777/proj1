@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="box"></div>
+  <script>
+
+let s = ""   
+let x = +prompt("Введите кол-во блоков:",1);
+let symbols = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+
+function userbox() {
+    for (i=1; i<=x; i++) {
+        s += "<div";
+        let color = "#";
+           for (j=0; j<6; j++) { 
+
+let r = Math.floor(Math.random() * symbols.length);
+color += symbols[r];
+
+  } 
+  let n = Math.round(Math.random()*11)
+s += ` style="width: 250px;height: 250px;text-align: center; background:${color}"><img src="images/${n}.jpg" style="width: 100px;height: 100px;"></div></div>`;
+}
+return s }
+box.innerHTML = (userbox())
+  </script>  
+
+
+<!-- <div style="width: 250px;height: 250px; background:#ffffff;"><img src="images/1.jpg" style="width: 100px;height: 100px;"></div> -->
+</body>
+</htm

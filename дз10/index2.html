@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ display:flex; justify-content: center;}
+        .balloons{color: white;
+            max-width:940px;
+            display: grid;
+    grid-auto-rows:minmax(200px, auto) ;
+    gap: 5px;
+
+    grid-template-areas:
+"a"
+"b"
+"c"
+"d"
+"e"
+"f"
+    }
+    p, h2 {margin-left: 10px;}
+    
+        button { width: 80%; height: 30px;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 20px;
+    }
+ 
+
+    .balloons div:nth-child(1) {grid-area: a;
+        background-image: url(images/hero-demo1.jpg);
+        background-size: 100%;
+        background-position: bottom left;
+    }
+    div:nth-child(2) {grid-area: b;
+        background-image:linear-gradient(to bottom, transparent, black), url(images/hero-demo5.jpg);
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;  
+    }
+        div:nth-child(2) h2{margin-top: auto;}
+    
+    div:nth-child(3) {grid-area: c;
+        background-image:linear-gradient(to bottom, transparent, black), url(images/hero-demo4.jpg);
+        background-size:100%;
+       display: flex;
+       align-items: flex-end;
+    }
+    div:nth-child(4) {grid-area: d;
+        background-image: url(images/hero-demo3.jpg);
+        background-size: 100%
+       }
+    
+       div:nth-child(5) {grid-area: e;
+        background-image: url(images/hero-demo2.jpg);
+        background-size: 100%
+       }
+       div:nth-child(6) {grid-area: f;
+        background-color: brown;
+        position: relative;
+       }
+    
+       @media (min-width:600px) {
+        .balloons{
+            grid-template-columns:1fr 1fr;
+            grid-template-areas:
+        "a a"
+        "a a"
+        "b d"
+        "b e"
+        "b f"
+        "c f"
+    }
+    
+    div:nth-child(2) {background-size: auto 100%}
+}
+    @media (min-width:800px) {
+        .balloons{
+            grid-template-columns:1fr 1fr 1fr;
+            grid-template-areas:
+        "a b d"
+        "a b e"
+        "a b f"
+        "a c f"
+        "a c f"   
+    }
+    .balloons div:nth-child(1) {background-size: auto 100%}
+           div:nth-child(3) {background-size: auto 100%}
+     }
+    
+    </style>
+</head>
+<body>
+    
+    <div class="balloons">
+   
+        <div>
+            <h2>Нам нравятся воздушные шары</h2>
+            <p>Здесь Вы можете найти много интересного, связанного с воздушными шарами.</p>
+        </div>
+        <div> 
+            <h2>Необычные формы</h2>
+            <p>Почему некоторые из них так необычно выглядят?</p>
+        </div>
+        <div>
+            <h2>10 вещей, которые вы обнаружите, когда летите на воздушном шаре</h2>
+        </div>
+        <div>
+            <h2>Как воздушные шары зависят от погоды</h2>
+            <p>Нагретые воздушные шары.</p>
+        </div>
+        <div>
+            <h2>Фото воздушных шаров</h2>
+                
+            <p>Праздник форм и размеров</p>
+        </div>
+        <div>
+            <p>Зарегистрируйтесь не откладывая. </p>
+            <button>Зарегистрироваться!</button>
+        </div>
+    
+
+</body>
+</html>
